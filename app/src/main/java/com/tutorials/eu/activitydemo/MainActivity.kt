@@ -14,7 +14,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         val btnsubmit = findViewById<Button>(R.id.button)
         btnsubmit.setOnClickListener{
-            val intent = Intent(this,AnotherActivity::class.java)
+            val intent = Intent(this,AnotherActivity::class.java).apply {
+                putExtra("key1","Manikant")
+                putExtra("key2",25)
+            }
             startActivity(intent)
         }
 
